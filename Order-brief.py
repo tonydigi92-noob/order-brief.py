@@ -47,7 +47,7 @@ def get_base64(bin_file):
 
 bg_style = "background: linear-gradient(to bottom, #87CEEB, #E0F7FA);" # Fallback
 if os.path.exists("bg.jpg"):
-    bin_str = get_base64("bg.png")
+    bin_str = get_base64("bg.jpg")
     bg_style = f"""
         background-image: url("data:image/png;base64,{bin_str}");
         background-size: cover;
@@ -322,3 +322,4 @@ with tab2:
     st.dataframe(df, use_container_width=True)
     if st.button("🔄 RELOAD DATA"):
         st.rerun()
+
